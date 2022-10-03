@@ -230,9 +230,9 @@ You can also log in to the Gitea repository with the following credentials.
 * Password - `openshift`
 ====
 
-Once you download or clone the project to your local file system, explore if the `customers-tomcat-solution.war` file exists in the *packages-mta* folder.
+Confirm you have the customers-tomcat-<solution>.war file in your filesystem.
 
-Select `Upload local binary` in Analysis mode popup. Then, drag and drop the *customers-tomcat-solution.war* file or Upload it from your local file system.
+Select `Upload local binary` in Analysis mode popup. Then, drag and drop the *customers-tomcat-<solution>.war* file or Upload it from your local file system.
 
 image::add-new-applications.png[Add new applications]
 
