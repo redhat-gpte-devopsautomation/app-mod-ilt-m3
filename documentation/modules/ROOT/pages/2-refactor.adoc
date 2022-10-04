@@ -218,7 +218,7 @@ You have the option to download the new binary artifact that you just built with
 
 For that, you must be logged in with the 'oc login' command on your local host environment and then run:
 
-oc cp $(oc get pods --no-headers -o custom-columns=":metadata.name" -l name=codeserver):/home/codeserver/modern-app-dev/customers-tomcat-legacy/target/customers-tomcat-0.0.1-SNAPSHOT.war ${HOME}/customers-tomcat-0.0.1-SNAPSHOT.war
+oc cp $(oc get pods --no-headers -o custom-columns=":metadata.name" -l app.kubernetes.io/name=codeserver):/home/codeserver/modern-app-dev/customers-tomcat-legacy/target/customers-tomcat-0.0.1-SNAPSHOT.war ${HOME}/customers-tomcat-0.0.1-SNAPSHOT.war
 
 Another option is to use the solution artifact (`customers-tomcat-solution.war`) that is packaged with the fixed code in your link:https://gitea.%SUBDOMAIN%/%USERID%/modern-app-dev[Gitea repository^].
 
