@@ -214,7 +214,13 @@ image::tackle-search-new-customers.png[tackle-search-new-customers]
 
 [NOTE]
 ====
-You can use the solution artifact (`customers-tomcat-solution.war`) that is packaged with the fixed code in your link:https://gitea.%SUBDOMAIN%/%USERID%/modern-app-dev[Gitea repository^] rather than walking through multiple steps from _commit_ to _push_, and _pull_ the new application artifact (_.war_ file) to your local file system..
+You have the option to download the new binary artifact that you just built with 'mvn clean package' command.
+
+For that, you must be logged in with the 'oc login' command on your local host environment and then run:
+
+oc cp $(oc get pods --no-headers -o custom-columns=":metadata.name" -l app.kubernetes.io/name=codeserver):/home/codeserver/modern-app-dev/customers-tomcat-legacy/target/customers-tomcat-0.0.1-SNAPSHOT.war ${HOME}/customers-tomcat-0.0.1-SNAPSHOT.war
+
+Another option is to use the solution artifact (`customers-tomcat-solution.war`) that is packaged with the fixed code in your link:https://gitea.%SUBDOMAIN%/%USERID%/modern-app-dev[Gitea repository^].
 
 image::gitea-repo.png[gitea-repo]
 
@@ -224,9 +230,9 @@ You can also log in to the Gitea repository with the following credentials.
 * Password - `openshift`
 ====
 
-Once you download or clone the project to your local file system, explore if the `customers-tomcat-solution.war` file exists in the *packages-mta* folder.
+Confirm you have the customers-tomcat-<solution>.war file in your filesystem.
 
-Select `Upload local binary` in Analysis mode popup. Then, drag and drop the *customers-tomcat-solution.war* file or Upload it from your local file system.
+Select `Upload local binary` in Analysis mode popup. Then, drag and drop the *customers-tomcat-<solution>.war* file or Upload it from your local file system.
 
 image::add-new-applications.png[Add new applications]
 
