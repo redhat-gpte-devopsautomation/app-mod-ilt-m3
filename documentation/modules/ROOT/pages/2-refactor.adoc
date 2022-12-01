@@ -193,7 +193,7 @@ The output should end up with `BUILD SUCCESS`.
 
 === 2.2.8. Re-run Tackle Analysis
 
-Let's go back to the link:https://tackle-tackle-%USERID%.%SUBDOMAIN%/applications/analysis-tab[Tackle Analysis web console^]. Then, create a new inventory to analyze the modernized application (*customers*). 
+Let's go back to the link:https://mta-mta-%USERID%.%SUBDOMAIN%/applications/analysis-tab[MTA Analysis web console^]. Then, create a new inventory to analyze the modernized application (*customers*). 
 
 Click on `Create new`.
 
